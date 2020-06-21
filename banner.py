@@ -51,9 +51,9 @@ def draw_text(dt_string):
         # update the y position so that we can use it for next line
         y = y + line_height
     # save the image
-    thumb = str(dt_string)+".png"
-    img.save('thumbnails/'+ str(thumb), optimize=True)
-    cmd = "python3 thumb.py --video-id Al5W-wZ2FOs --file "+ "thumbnails/"+thumb
+    thumb = "thumbnail.png"
+    img.save('thumbnail/'+ str(thumb), optimize=True)
+    cmd = "python3 thumb.py --video-id Al5W-wZ2FOs --file "+ "thumbnail/"+thumb
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
     out, err = p.communicate()
     print (out)
